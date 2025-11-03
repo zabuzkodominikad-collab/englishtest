@@ -202,7 +202,7 @@ async def telegram_webhook(update: TGUpdate):
 
     if text.startswith("/clear"):
         SCORES[chat_id] = {"Paul": 0, "Roman": 0}
-        await send_message(chat_id, "Счёт обнулён. Начинаем заново!\n\n" + format_total(chat_id))
+        await send_message(chat_id, "The score is reset. Let's start over!\n\n" + format_total(chat_id))
         return Response(status_code=200)
 
     # Парсинг очков из произвольного текста
